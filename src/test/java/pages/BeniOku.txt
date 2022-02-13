@@ -1,4 +1,0 @@
-Arkadaslar
-
-pages kisminda 5 tane class var, sitenin benzer bolumlerini inceleyen arkadaslar
-ilgili classlara locatelerini ekleyerek baslayabilirler.
