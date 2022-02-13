@@ -10,16 +10,16 @@ public class TestCase01 {
 
     @Test
     public void test01() throws InterruptedException {
-         hotel = new HotelMyCampMain();
-         hotel.loginOl();
+        hotel = new HotelMyCampMain();
+        hotel.loginOl();
 
 
         hotel.hotelManagementButtonElementi.click();
         hotel.hotelListButtonElementi.click();
         hotel.detailsHotelListButonu.click();
 
-Driver.getDriver().switchTo().newWindow(WindowType.TAB);
-Driver.getDriver().get("https://www.hotelmycamp.com/admin/HotelAdmin/Edit?Id=1074#tab_general");
+        Driver.getDriver().switchTo().newWindow(WindowType.TAB);
+        Driver.getDriver().get("https://www.hotelmycamp.com/admin/HotelAdmin/Edit?Id=1074#tab_general");
 
         hotel.codeKutusuWebElementi.clear();
         hotel.codeKutusuWebElementi.sendKeys("G27");
@@ -38,4 +38,3 @@ Driver.getDriver().get("https://www.hotelmycamp.com/admin/HotelAdmin/Edit?Id=107
 
     }
 }
-

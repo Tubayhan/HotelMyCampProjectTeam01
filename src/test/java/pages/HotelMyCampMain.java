@@ -126,16 +126,16 @@ public class HotelMyCampMain {
 
 
 
-public void loginOl(){
+    public void loginOl(){
 
-    Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
-    anasayfaLogin.click();
-    usernameBox.sendKeys(ConfigReader.getProperty("ValidUserName"));
-    passwordBox.sendKeys(ConfigReader.getProperty("ValidPassword"));
-    loginButtonElementi.click();
+        Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
+        anasayfaLogin.click();
+        usernameBox.sendKeys(ConfigReader.getProperty("ValidUserName"));
+        passwordBox.sendKeys(ConfigReader.getProperty("ValidPassword"));
+        loginButtonElementi.click();
 
 
-}
+    }
 
     public void bekle(int saniye){
         try {
