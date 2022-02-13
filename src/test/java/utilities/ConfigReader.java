@@ -10,7 +10,9 @@ public class ConfigReader {
 
     static {
 
-        String path="src/configuration.properties";
+        String path="src/configuration.properties"; //configuration.properties (Resource Bundle isimli file)
+        //configuration.properties isimli file da test datalari, URL, valid credentials gibi bilgiler mevcuttur
+        //oradan alip kullaniriz ve tekrar olmamis olur
 
         try {
 
@@ -29,7 +31,7 @@ public class ConfigReader {
 
     public static String getProperty(String key){
 
-        return properties.getProperty(key);
+        return properties.getProperty(key); //key bizim browser olabilir mesela
     }
 
 
