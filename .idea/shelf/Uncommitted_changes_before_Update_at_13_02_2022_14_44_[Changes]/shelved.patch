@@ -1,0 +1,117 @@
+Index: src/test/java/tests/US_0005/TestCase01.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package tests.US_0005;\r\n\r\nimport org.openqa.selenium.WindowType;\r\nimport org.testng.annotations.Test;\r\nimport pages.HotelMyCampMain;\r\nimport utilities.Driver;\r\n\r\npublic class TestCase01 {\r\n    HotelMyCampMain hotel;\r\n\r\n    @Test\r\n    public void test01() throws InterruptedException {\r\n         hotel = new HotelMyCampMain();\r\n         hotel.loginOl();\r\n\r\n\r\n        hotel.hotelManagementButtonElementi.click();\r\n        hotel.hotelListButtonElementi.click();\r\n        hotel.detailsHotelListButonu.click();\r\n\r\nDriver.getDriver().switchTo().newWindow(WindowType.TAB);\r\nDriver.getDriver().get(\"https://www.hotelmycamp.com/admin/HotelAdmin/Edit?Id=1074#tab_general\");\r\n\r\n        hotel.codeKutusuWebElementi.clear();\r\n        hotel.codeKutusuWebElementi.sendKeys(\"G27\");\r\n\r\n\r\n        // hotel.nameKutusuWebElementi.sendKeys(\"Titanic Hotel\");\r\n        // hotel.addHotelButtonElementi.sendKeys(\"US\");\r\n        // hotel.phoneKutusuWebElementi.sendKeys(\"+1 408-123-987\");\r\n        // hotel.emailHotelListKutusuWebElementi.sendKeys(\"titanichtl@gmail.com\");\r\n        // hotel.idGroupKutusuWebElementi.sendKeys(\"Hotel Type2\");\r\n        // hotel.saveButonuWebElementi.click();\r\n        // actions.perform();\r\n\r\n\r\n\r\n\r\n    }\r\n}\r\n\r\n
+===================================================================
+diff --git a/src/test/java/tests/US_0005/TestCase01.java b/src/test/java/tests/US_0005/TestCase01.java
+--- a/src/test/java/tests/US_0005/TestCase01.java	
++++ b/src/test/java/tests/US_0005/TestCase01.java	
+@@ -10,16 +10,16 @@
+ 
+     @Test
+     public void test01() throws InterruptedException {
+-         hotel = new HotelMyCampMain();
+-         hotel.loginOl();
++        hotel = new HotelMyCampMain();
++        hotel.loginOl();
+ 
+ 
+         hotel.hotelManagementButtonElementi.click();
+         hotel.hotelListButtonElementi.click();
+         hotel.detailsHotelListButonu.click();
+ 
+-Driver.getDriver().switchTo().newWindow(WindowType.TAB);
+-Driver.getDriver().get("https://www.hotelmycamp.com/admin/HotelAdmin/Edit?Id=1074#tab_general");
++        Driver.getDriver().switchTo().newWindow(WindowType.TAB);
++        Driver.getDriver().get("https://www.hotelmycamp.com/admin/HotelAdmin/Edit?Id=1074#tab_general");
+ 
+         hotel.codeKutusuWebElementi.clear();
+         hotel.codeKutusuWebElementi.sendKeys("G27");
+@@ -37,5 +37,4 @@
+ 
+ 
+     }
+-}
+-
++}
+\ No newline at end of file
+Index: src/test/java/tests/US_0009/TestCase01.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package tests.US_0009;\r\n\r\npublic class TestCase01 {\r\n}\r\n
+===================================================================
+diff --git a/src/test/java/tests/US_0009/TestCase01.java b/src/test/java/tests/US_0009/TestCase01.java
+--- a/src/test/java/tests/US_0009/TestCase01.java	
++++ b/src/test/java/tests/US_0009/TestCase01.java	
+@@ -1,4 +1,5 @@
+ package tests.US_0009;
+ 
+ public class TestCase01 {
++    //Helloo
+ }
+Index: src/test/java/tests/US_0004/TestCase01.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package tests.US_0004;\r\n\r\npublic class TestCase01 {\r\n}\r\n
+===================================================================
+diff --git a/src/test/java/tests/US_0004/TestCase01.java b/src/test/java/tests/US_0004/TestCase01.java
+--- a/src/test/java/tests/US_0004/TestCase01.java	
++++ b/src/test/java/tests/US_0004/TestCase01.java	
+@@ -1,4 +1,18 @@
+ package tests.US_0004;
+ 
++import org.testng.annotations.Test;
++import pages.HotelMyCampMain;
++import utilities.ConfigReader;
++import utilities.Driver;
++
+ public class TestCase01 {
++
++
++    @Test
++    public void test01() {
++        HotelMyCampMain obj = new HotelMyCampMain();
++        Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
++
++    }
++    //987
+ }
+Index: src/test/java/pages/HotelMyCampMain.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package pages;\r\n\r\nimport org.openqa.selenium.By;\r\nimport org.openqa.selenium.WebElement;\r\nimport org.openqa.selenium.support.FindBy;\r\nimport org.openqa.selenium.support.PageFactory;\r\nimport utilities.ConfigReader;\r\nimport utilities.Driver;\r\n\r\n\r\n\r\npublic class HotelMyCampMain {\r\n\r\n    public HotelMyCampMain() {\r\n\r\n        PageFactory.initElements(Driver.getDriver(), this);\r\n\r\n    }\r\n\r\n\r\n    @FindBy(xpath = \"//a[text()='Log in']\")\r\n    public WebElement anasayfaLogin;\r\n\r\n    @FindBy(xpath = \"//input[@id='UserName']\")\r\n    public WebElement usernameBox;\r\n\r\n    @FindBy(xpath = \"//input[@id='Password']\")\r\n    public WebElement passwordBox;\r\n\r\n    @FindBy(xpath = \"//input[@id='btnSubmit']\")\r\n    public WebElement loginButtonElementi;\r\n\r\n    @FindBy(xpath = \"//span[text()='Create a new account']\")\r\n    public WebElement createNewAccountButtonElementi;\r\n\r\n    @FindBy(xpath = \"//span[text()='System Management']\")\r\n    public WebElement systemManagementButtonElementi;\r\n\r\n    @FindBy(xpath = \"//span[text()='User Management']\")\r\n    public WebElement userManagementButtonElementi;\r\n\r\n    @FindBy(xpath = \"(//ul[@class='sub-menu'])[2]\")\r\n    public WebElement userListButtonElementi;\r\n\r\n    @FindBy(xpath = \"//span[text()='Hotel Management']\")\r\n    public WebElement hotelManagementButtonElementi;\r\n\r\n    @FindBy(xpath = \"//span[text()='Add User ']\")\r\n    public WebElement addUserButtonElementi;\r\n\r\n    @FindBy(xpath = \"(//a[@href='/admin/HotelAdmin'])[1]\")\r\n    public WebElement hotelListButtonElementi;\r\n\r\n    @FindBy(xpath = \"//a[@href='/admin/HotelRoomAdmin']\")\r\n    public WebElement hotelRoomsButtonElementi;\r\n\r\n    @FindBy(xpath = \"//a[@href='/admin/RoomReservationAdmin']\")\r\n    public WebElement roomReservationButtonElementi;\r\n\r\n    @FindBy(xpath = \"//span[text()='Add Hotel ']\")\r\n    public WebElement addHotelButtonElementi;\r\n\r\n\r\n    @FindBy(xpath = \"//span[text()='Add Hotelroom ']\")\r\n    public WebElement addHotelRoomButtonElementi;\r\n\r\n    @FindBy(xpath = \"//span[text()='Add Room Reservation ']\")\r\n    public WebElement addRoomReservationButtonElementi;\r\n\r\n\r\n    //Create User Register Form Web Element Locator *******************************************************\r\n\r\n    @FindBy(xpath = \"//input[@id='UserName']\")\r\n    public WebElement createUserRegisterFormUserNameBoxElementi;\r\n\r\n    @FindBy(xpath = \"//input[@id='txtPassword']\")\r\n    public WebElement createUserRegisterFormPasswordBoxElementi;\r\n\r\n    @FindBy(xpath = \"//input[@id='Email']\")\r\n    public WebElement createUserRegisterFormEmailBoxElementi;\r\n\r\n    @FindBy(xpath = \"//input[@id='NameSurname']\")\r\n    public WebElement createUserRegisterFormNameBoxElementi;\r\n\r\n    @FindBy(xpath = \"//input[@id='PhoneNo']\")\r\n    public WebElement createUserRegisterFormTelNoElementi;\r\n\r\n    @FindBy(xpath = \"//input[@id='SSN']\")\r\n    public WebElement createUserRegisterFormSocialSecurityBoxElementi;\r\n\r\n    @FindBy(xpath = \"//input[@id='DrivingLicense']\")\r\n    public WebElement createUserRegisterFormDriverLicenseBoxElementi;\r\n\r\n    @FindBy(xpath = \"//select[@id='IDCountry']\")\r\n    public WebElement createUserRegisterFormCountryDropDownElementi;\r\n\r\n    @FindBy(xpath = \"//select[@id='IDState']\")\r\n    public WebElement createUserRegisterFormStateDropDownElementi;\r\n\r\n    @FindBy(xpath = \"//input[@id='Address']\")\r\n    public WebElement createUserRegisterFormAddressBoxElementi;\r\n\r\n    @FindBy(xpath = \"//input[@id='BirthDate']\")\r\n    public WebElement createUserRegisterFormBirthDayBoxElementi;\r\n\r\n    @FindBy(xpath = \"//input[@id='WorkingSector']\")\r\n    public WebElement createUserRegisterFormWorkingSectorBoxElementi;\r\n\r\n    @FindBy(xpath = \"//select[@id='IDRole']\")\r\n    public WebElement createUserRegisterFormRoleDropDownElementi;\r\n\r\n    @FindBy(xpath = \"(//div[@class='radio'])[1]\")\r\n    public WebElement createUserRegisterFormApprovedRadioButtonYes;\r\n\r\n    @FindBy(xpath = \"(//div[@class='radio'])[2]\")\r\n    public WebElement createUserRegisterFormApprovedRadioButtonNo;\r\n\r\n    @FindBy(xpath = \"//button[@id='btnSubmit']\")\r\n    public WebElement createUserRegisterFormSaveButtonElementi;\r\n\r\n//********************************************************************************************************//\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\npublic void loginOl(){\r\n\r\n    Driver.getDriver().get(ConfigReader.getProperty(\"HMCUrl\"));\r\n    anasayfaLogin.click();\r\n    usernameBox.sendKeys(ConfigReader.getProperty(\"ValidUserName\"));\r\n    passwordBox.sendKeys(ConfigReader.getProperty(\"ValidPassword\"));\r\n    loginButtonElementi.click();\r\n\r\n\r\n}\r\n\r\n    public void bekle(int saniye){\r\n        try {\r\n            Thread.sleep(saniye*1000);\r\n        } catch (InterruptedException e) {\r\n            e.printStackTrace();\r\n        }\r\n    }\r\n\r\n\r\n\r\n\r\n\r\n    // Hotel List WebElement Locator********************************************************************\r\n\r\n\r\n\r\n\r\n    @FindBy(xpath = \"/html/body/div[3]/div[1]/div/ul/li[3]/ul/li[2]/ul/li[1]\")\r\n    public WebElement hotelListYaziWebElementi;\r\n\r\n    @FindBy(xpath = \"//span[text()='List Of Hotels']\")\r\n    public WebElement hotelListYazisi;\r\n\r\n    @FindBy(xpath = \"(//a[@class='btn btn-xs default'])[1]\")\r\n    public WebElement detailsButonu;\r\n\r\n    @FindBy(xpath = \"(//a[@class='btn btn-xs default'])[2]\")\r\n    public WebElement detailsHotelListButonu;\r\n\r\n    @FindBy(xpath = \"(//div[@class='caption'])[1]\")\r\n    public WebElement editHotelYazisi;\r\n\r\n    @FindBy(xpath = \"//div[@class='portlet-title'][1]\")\r\n    public WebElement hotelDataWebElementi;\r\n\r\n    @FindBy(xpath = \"//input[@id='Code']\")\r\n    public WebElement codeKutusuWebElementi;\r\n\r\n    @FindBy(id = \"Name\")\r\n    public WebElement nameKutusuWebElementi;\r\n\r\n\r\n    @FindBy(id = \"Address\")\r\n    public WebElement addressKutusuWebElementi;\r\n\r\n    @FindBy(id = \"Phone\")\r\n    public WebElement phoneKutusuWebElementi;\r\n\r\n    @FindBy(id = \"Email\")\r\n    public WebElement emailKutusuWebElementi;\r\n\r\n\r\n    @FindBy(id = \"Email\")\r\n    public WebElement emailHotelListKutusuWebElementi;\r\n\r\n\r\n    @FindBy(id = \"IDGroup\")\r\n    public WebElement idGroupKutusuWebElementi;\r\n\r\n    @FindBy(xpath = \"(//button[@class='btn green'])[1]\")\r\n    public WebElement saveButonuWebElementi;\r\n\r\n    @FindBy(id = \"btnDelete\")\r\n    public WebElement deleteButonuWebElementi;\r\n\r\n    @FindBy(xpath = \"//button[text()='Cancel']\")\r\n    public WebElement alertCancelButonuWebElementi;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n}\r\n
+===================================================================
+diff --git a/src/test/java/pages/HotelMyCampMain.java b/src/test/java/pages/HotelMyCampMain.java
+--- a/src/test/java/pages/HotelMyCampMain.java	
++++ b/src/test/java/pages/HotelMyCampMain.java	
+@@ -126,16 +126,16 @@
+ 
+ 
+ 
+-public void loginOl(){
++    public void loginOl(){
+ 
+-    Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
+-    anasayfaLogin.click();
+-    usernameBox.sendKeys(ConfigReader.getProperty("ValidUserName"));
+-    passwordBox.sendKeys(ConfigReader.getProperty("ValidPassword"));
+-    loginButtonElementi.click();
++        Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
++        anasayfaLogin.click();
++        usernameBox.sendKeys(ConfigReader.getProperty("ValidUserName"));
++        passwordBox.sendKeys(ConfigReader.getProperty("ValidPassword"));
++        loginButtonElementi.click();
+ 
+ 
+-}
++    }
+ 
+     public void bekle(int saniye){
+         try {
+@@ -221,4 +221,4 @@
+ 
+ 
+ 
+-}
++}
+\ No newline at end of file

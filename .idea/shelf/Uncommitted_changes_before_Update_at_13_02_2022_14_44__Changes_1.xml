@@ -1,0 +1,44 @@
+<changelist name="Uncommitted_changes_before_Update_at_13_02_2022_14_44_[Changes]1" date="1644759884522" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_02_2022_14_44_[Changes]1/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 13.02.2022 14:44 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="target/test-classes/tests/US_0007/TestCase02.class" />
+    <option name="AFTER_PATH" value="target/test-classes/tests/US_0007/TestCase02.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_02_2022_14_44_[Changes]1/TestCase02.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/test-classes/utilities/ReusableMethods.class" />
+    <option name="AFTER_PATH" value="target/test-classes/utilities/ReusableMethods.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_02_2022_14_44_[Changes]1/ReusableMethods.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/test-classes/tests/US_0007/TestCase01.class" />
+    <option name="AFTER_PATH" value="target/test-classes/tests/US_0007/TestCase01.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_02_2022_14_44_[Changes]1/TestCase01.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/test-classes/utilities/Driver.class" />
+    <option name="AFTER_PATH" value="target/test-classes/utilities/Driver.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_02_2022_14_44_[Changes]1/Driver.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/test-classes/tests/US_0009/TestCase03.class" />
+    <option name="AFTER_PATH" value="target/test-classes/tests/US_0009/TestCase03.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_02_2022_14_44_[Changes]1/TestCase03.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/test-classes/pages/HotelMyCampMain.class" />
+    <option name="AFTER_PATH" value="target/test-classes/pages/HotelMyCampMain.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_02_2022_14_44_[Changes]1/HotelMyCampMain.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/test-classes/utilities/ReusableMethods$2.class" />
+    <option name="AFTER_PATH" value="target/test-classes/utilities/ReusableMethods$2.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_02_2022_14_44_[Changes]1/ReusableMethods$2.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/test-classes/utilities/ReusableMethods$1.class" />
+    <option name="AFTER_PATH" value="target/test-classes/utilities/ReusableMethods$1.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_02_2022_14_44_[Changes]1/ReusableMethods$1.class" />
+  </binary>
+</changelist>
