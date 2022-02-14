@@ -19,6 +19,7 @@ public class TestCase01 {
 
 
 
+
        // 2. https://www.hotelmycamp.com/ adresine gidilir ve
         // Navbar'daki butonlara tıklanır ilgili sayfaya gidip gitmediği kontrol edilir
     }
