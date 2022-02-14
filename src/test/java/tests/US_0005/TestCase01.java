@@ -23,6 +23,7 @@ public class TestCase01 {
 
 
 
+
         hotel.hotelManagementButtonElementi.click();
         hotel.hotelListButtonElementi.click();
         hotel.detailsButonu.click();
