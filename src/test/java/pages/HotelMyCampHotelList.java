@@ -5,6 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 public class HotelMyCampHotelList {
 
@@ -111,7 +112,7 @@ public class HotelMyCampHotelList {
  public WebElement hotelListYaziWebElementi;
 
  @FindBy(xpath = "//span[text()='List Of Hotels']")
- public WebElement hotelListYazisi;
+ public WebElement listofHotelsYazisi;
 
  @FindBy(xpath = "(//tr[@class='odd'])[1]")
  public WebElement detailsButonu;
@@ -171,6 +172,7 @@ public class HotelMyCampHotelList {
  public void loginOl() {
 
   Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
+  ReusableMethods.waitFor(3);
   anasayfaLogin.click();
   usernameBox.sendKeys(ConfigReader.getProperty("ValidUserName"));
   passwordBox.sendKeys(ConfigReader.getProperty("ValidPassword"));
