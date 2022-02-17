@@ -9,23 +9,19 @@ import pages.HotelMyCampHotelList;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
+import java.io.IOException;
 import java.util.Set;
 
 public class TestCase03 {
     HotelMyCampHotelList hmclist;
 
     @Test
-    public void test01(){
+    public void test01() throws IOException {
        hmclist = new HotelMyCampHotelList();
-        //hmclist.loginOl();
-        //ReusableMethods.waitFor(3);
 
-       //hmclist.hotelManagementButtonElementi.click();
-       //hmclist.hotelListButtonElementi.click();
-       //hmclist.detailsButonu.click();
-       //hmclist.detailsHotelListButonu.click();
+   ReusableMethods.switchToWindow("Admin - Edit Hotel");
 
-        String ilksyfHandleDegeri = Driver.getDriver().getWindowHandle();
+    /*  String ilksyfHandleDegeri = Driver.getDriver().getWindowHandle();
 
         Set<String> handleSet = Driver.getDriver().getWindowHandles();
         String ikincisyfHandleDegeri = "";
@@ -34,7 +30,7 @@ public class TestCase03 {
             if (!each.equals(ilksyfHandleDegeri))
                 ikincisyfHandleDegeri = each;
         }
-        Driver.getDriver().switchTo().window(ikincisyfHandleDegeri);
+        Driver.getDriver().switchTo().window(ikincisyfHandleDegeri);*/
         ReusableMethods.waitFor(4);
 
        hmclist.codeKutusuWebElementi.clear();
