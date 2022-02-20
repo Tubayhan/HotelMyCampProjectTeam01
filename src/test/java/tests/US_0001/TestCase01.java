@@ -17,28 +17,29 @@ public class TestCase01 {
 //// home,Rooms,Restarurant,AboutBlog,Contact ve Log in butonları görüyor mu dıye bakılır
 
     HotelMyCampMainaAnaSayfa hotelMyCampMainaAnaSayfa;
-    /*  @BeforeSuitenaSayfa;
-
-      public  void url() {
 
 
-      }
-
-      @AfterSuite
-      public void url1() {
-          Driver.closeDriver();
-      }*/
     @Test
     public void isDisPlayedTesti1() throws InterruptedException {
 
+        //extentTest=extentReports.createTest("hotelMyCampAnasayfa","butonların goruldugu test edıldı");
+
         hotelMyCampMainaAnaSayfa=new HotelMyCampMainaAnaSayfa();
         hotelMyCampMainaAnaSayfa.anaSayfaUrl();
+       // extentTest.info("hotelmycamp sayfasına gidildi");
         Assert.assertTrue(hotelMyCampMainaAnaSayfa.homeButton.isDisplayed());
+        //extentTest.pass("homeButton'unun gorunurlugu test edildi");
+
         Assert.assertTrue(hotelMyCampMainaAnaSayfa.roomsButton.isDisplayed());
+        //extentTest.pass("roomsButonunun gorunurlugu test edildi");
         Assert.assertTrue(hotelMyCampMainaAnaSayfa.restaurantButton.isDisplayed());
+        //extentTest.pass("restaurantButonunun gorunurlugu test edildi");
         Assert.assertTrue(hotelMyCampMainaAnaSayfa.aboutButton.isDisplayed());
+        //extentTest.pass("aboutButton'unun gorunurlugu test edildi");
         Assert.assertTrue(hotelMyCampMainaAnaSayfa.contactButton.isDisplayed());
+        //extentTest.pass("contactButton'unun gorunurlugu test edildi");
         Assert.assertTrue(hotelMyCampMainaAnaSayfa.anasayfaLogin.isDisplayed());
+        //extentTest.pass("anasayfaLoginButton'unun gorunurlugu test edildi");
 
 
         Thread.sleep(3000);
@@ -49,27 +50,40 @@ public class TestCase01 {
 
     @Test //(dependsOnMethods = "isDisplayedTesti1")
     public void isDisPlayedTesti2() throws InterruptedException {
+        //extentTest=extentReports.createTest("hotelMyCampAnasayfa","butonların goruldugu ve erişilebildiği test edıldı");
 
         HotelMyCampMainaAnaSayfa hotelMyCampMainaAnaSayfa=new HotelMyCampMainaAnaSayfa();
 
 
         hotelMyCampMainaAnaSayfa.roomsButton.click();
+        // extentTest.info("hotelmycamp sayfasına gidildi ve roomsButtonuna tıklandı");
         Assert.assertTrue(hotelMyCampMainaAnaSayfa.roomSayfaControl.isDisplayed());
+        //extentTest.pass("roomsbottonuna tıklandıgında sayfaya geçiş  test edildi");
+
 
         hotelMyCampMainaAnaSayfa.restaurantButton.click();
+        // extentTest.info("restaurantButtonu tıklandı");
         Assert.assertTrue(hotelMyCampMainaAnaSayfa.restaurantSayfaControl.isDisplayed());
+        //extentTest.pass("restaurantButtonu tıklandıgında sayfaya geçiş test edildi");
 
         hotelMyCampMainaAnaSayfa.aboutButton.click();
+        // extentTest.info(" aboutButtonuna tıklandı");
         String actualUrl= Driver.getDriver().getCurrentUrl();
         String expectedUrl="https://www.hotelmycamp.com/content/about";
         Assert.assertEquals(actualUrl,expectedUrl);
+        //extentTest.pass("aboutButtonu tıklandıgında Url karşılastırması test edildi");
 
         hotelMyCampMainaAnaSayfa.contactButton.click();
+        // extentTest.info(" contactButtonuna tıklandı");
         Thread.sleep(3000);
         Assert.assertTrue(hotelMyCampMainaAnaSayfa.contactSayfaControl.isDisplayed());
+        //extentTest.pass("contactButtonu tıklandıgında sayfaya geçiş  test edildi");
 
         hotelMyCampMainaAnaSayfa.anasayfaLogin.click();
+
+        // extentTest.info(" anasayfaLoginButonu tıklandı");
         Assert.assertTrue(hotelMyCampMainaAnaSayfa.logInSayfaControl.isDisplayed());
+        //extentTest.pass("anasayfaLoginButonu tıklandıgında sayfaya geçiş  test edildi");
 
 
 
@@ -86,6 +100,8 @@ public class TestCase01 {
 
     @Test //(dependsOnMethods = "isDisplayedTesti2")
     public void isDisPlayedTesti3() throws InterruptedException {
+
+        //extentTest=extentReports.createTest("hotelMyCampAnasayfa","butonların goruldugu ve erişilebildiği test edıldı");
 
         hotelMyCampMainaAnaSayfa = new HotelMyCampMainaAnaSayfa();
         hotelMyCampMainaAnaSayfa.anaSayfaUrl();
