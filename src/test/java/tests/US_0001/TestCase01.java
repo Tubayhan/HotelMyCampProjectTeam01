@@ -8,8 +8,8 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 import pages.HotelMyCampMainaAnaSayfa;
 import utilities.Driver;
+https://us05web.zoom.us/j/8286995746?pwd=MkJlaG1zODZBOTJTN04yay9yczEyZz09
 
-import java.io.IOException;
 
 
 public class TestCase01 {
